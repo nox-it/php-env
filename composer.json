@@ -1,0 +1,34 @@
+{
+    "name": "nox-it/php-nox-env",
+    "description": "PHP NOX ENV",
+    "type": "library",
+    "keywords": ["php", "environment"],
+    "license": "BSD-3-Clause",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Jonatas Sas",
+            "email": "atendimento@jsas.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "nox\\base\\env\\": "env/"
+        }
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nox-it/php-nox-env"
+        }
+    ]
+}
