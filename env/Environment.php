@@ -193,7 +193,7 @@
                 $index = (strlen($text) - 1);
 
                 if ($index > -1) {
-                    return ($text[$index] !== static::$prefixSeparator);
+                    return ($text[$index] === static::$prefixSeparator);
                 }
             }
 
