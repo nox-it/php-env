@@ -5,8 +5,6 @@
     use Dotenv\Dotenv;
     use Exception;
 
-    // NOX_ENV_APP_PROD_NAME
-
     /**
      * Class Environment
      *
@@ -14,8 +12,8 @@
      */
     class Environment
     {
-        const DEFAULT_BASE_PREFIX = 'NOX_ENV';
-        const DEFAULT_APP_PREFIX  = 'APP';
+        const DEFAULT_BASE_PREFIX = 'APP_ENV';
+        const DEFAULT_APP_PREFIX  = 'NOX';
         const DEFAULT_ENV_PREFIX  = 'PROD';
 
         /**
@@ -37,6 +35,11 @@
          * @var string
          */
         public static string $prefixSeparator = '_';
+
+        /**
+         * @var bool
+         */
+        protected static bool $useSystemEnv = false;
 
         #region Instance
         /**
@@ -97,6 +100,8 @@
                 ));
 
                 static::$_instance = $dotenv;
+            } else {
+                static::$useSystemEnv = true;
             }
         }
         #endregion
@@ -202,7 +207,7 @@
          */
         public static function withPrefix(string $name): string
         {
-            $p = static::$envPrefix;
+            $p = ((static::$useSystemEnv) ? static::$envPrefix : static::$dotPrefix);
 
             if (!empty($p) && substr($name, 0, strlen($p)) !== $p) {
                 $name = "{$p}{$name}";
