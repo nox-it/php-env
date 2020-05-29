@@ -41,6 +41,11 @@
          */
         protected static bool $useSystemEnv = false;
 
+        /**
+         * @var array
+         */
+        protected static array $vars = [];
+
         #region Instance
         /**
          * @return Dotenv
@@ -60,22 +65,23 @@
         #region Initialization
         /**
          * @param string $path
-         * @param array  $required
+         * @param array  $variables
          * @param array  $booleans
          * @param string $basePrefix
          * @param string $appPrefix
          * @param string $envPrefix
+         * @param bool   $clearEnv
          *
          * @noinspection PhpUnused
          */
-        public static function initialize(string $path, array $required = [], array $booleans = [], string $basePrefix = '', string $appPrefix = '', string $envPrefix = ''): void
+        public static function initialize(string $path, array $variables, array $booleans = [], string $basePrefix = '', string $appPrefix = '', string $envPrefix = '', bool $clearEnv = true): void
         {
             $currentEnvPrefix = static::$envPrefix = static::generatePrefix($basePrefix, $appPrefix, $envPrefix, true);
             $currentDotPrefix = static::$dotPrefix = static::generatePrefix($basePrefix, $appPrefix, $envPrefix, false);
 
             $inSystemEnv = true;
 
-            foreach ($required as $k) {
+            foreach ($variables as $k) {
                 $key = "{$currentEnvPrefix}{$k}";
 
                 if (in_array($k, $booleans)) {
@@ -96,17 +102,23 @@
 
                 $dotenv->required(array_map(
                     fn ($item) => "{$currentDotPrefix}{$item}",
-                    $required
+                    $variables
                 ));
 
                 static::$_instance = $dotenv;
             } else {
                 static::$useSystemEnv = true;
             }
+
+            static::saveEnv($variables);
+
+            if ($clearEnv) {
+                static::clearEnv($basePrefix);
+            }
         }
         #endregion
 
-        #region GetEnv
+        #region Get, Save and Clear Environment
         /**
          * @param string $name
          * @param mixed  $default
@@ -117,13 +129,17 @@
         {
             $name = static::withPrefix($name);
 
-            $var = getenv($name);
+            $value = '';
 
-            if (empty($var)) {
+            if (isset(static::$vars[$name])) {
+                $value = static::$vars[$name];
+            }
+
+            if (empty($value)) {
                 return $default;
             }
 
-            return $var;
+            return $value;
         }
 
         /**
@@ -142,6 +158,59 @@
                 fn ($matches)  => static::get($matches[1]),
                 $str
             );
+        }
+
+        /**
+         * @param array $variables
+         *
+         * @return bool
+         */
+        protected static function saveEnv(array $variables): bool
+        {
+            $vars = [];
+
+            foreach ($variables as $key) {
+                $vars[$key] = getenv($key);
+            }
+
+            static::$vars = $vars;
+
+            return true;
+        }
+
+        /**
+         * @param string $prefix
+         *
+         * @return bool
+         */
+        protected static function clearEnv(string $prefix): bool
+        {
+            $prefix    = preg_quote($prefix);
+            $variables = getenv();
+
+            foreach ($variables as $key => $value) {
+                if (preg_match("/^{$prefix}.*$/", $key)) {
+                    putenv($key);
+
+                    if (isset($_SERVER[$key])) {
+                        unset($_SERVER[$key]);
+                    }
+
+                    if (isset($_ENV[$key])) {
+                        unset($_ENV[$key]);
+                    }
+
+                    if (isset($GLOBALS, $GLOBALS['_SERVER'], $GLOBALS['_SERVER'][$key])) {
+                        unset($GLOBALS['_SERVER'][$key]);
+                    }
+
+                    if (isset($GLOBALS, $GLOBALS['_ENV'], $GLOBALS['_ENV'][$key])) {
+                        unset($GLOBALS['_ENV'][$key]);
+                    }
+                }
+            }
+
+            return true;
         }
         #endregion
 
