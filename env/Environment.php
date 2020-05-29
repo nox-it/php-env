@@ -110,7 +110,10 @@
                 static::$useSystemEnv = true;
             }
 
-            static::saveEnv($variables);
+            static::saveEnv(
+                $variables,
+                (($inSystemEnv) ? $currentEnvPrefix : $currentDotPrefix)
+            );
 
             if ($clearEnv) {
                 static::clearEnv($basePrefix);
@@ -161,16 +164,19 @@
         }
 
         /**
-         * @param array $variables
+         * @param array  $variables
+         * @param string $prefix
          *
          * @return bool
          */
-        protected static function saveEnv(array $variables): bool
+        protected static function saveEnv(array $variables, string $prefix): bool
         {
             $vars = [];
 
             foreach ($variables as $key) {
-                $vars[$key] = getenv($key);
+                $k = "{$prefix}{$key}";
+
+                $vars[$k] = getenv($k);
             }
 
             static::$vars = $vars;
