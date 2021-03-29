@@ -1,15 +1,15 @@
-PhpNoxEnv
+PhpNyxEnv
 =========
 
-PhpNoxEnv is a `.env` library for PHP.
+PhpNyxEnv is a `.env` library for PHP.
 
-[![Latest Stable Version](https://poser.pugx.org/nox-it/php-nox-env/v/stable)](https://packagist.org/packages/nox-it/php-nox-env)
-[![Total Downloads](https://poser.pugx.org/nox-it/php-nox-env/downloads)](https://packagist.org/packages/nox-it/php-nox-env)
-[![Latest Unstable Version](https://poser.pugx.org/nox-it/php-nox-env/v/unstable)](https://packagist.org/packages/nox-it/php-nox-env)
-[![License](https://poser.pugx.org/nox-it/php-nox-env/license)](https://packagist.org/packages/nox-it/php-nox-env)
-[![Monthly Downloads](https://poser.pugx.org/nox-it/php-nox-env/d/monthly)](https://packagist.org/packages/nox-it/php-nox-env)
-[![Daily Downloads](https://poser.pugx.org/nox-it/php-nox-env/d/daily)](https://packagist.org/packages/nox-it/php-nox-env)
-[![composer.lock](https://poser.pugx.org/nox-it/php-nox-env/composerlock)](https://packagist.org/packages/nox-it/php-nox-env)
+[![Latest Stable Version](https://poser.pugx.org/nyx-solutions/php-nyx-env/v/stable)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Total Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/downloads)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Latest Unstable Version](https://poser.pugx.org/nyx-solutions/php-nyx-env/v/unstable)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![License](https://poser.pugx.org/nyx-solutions/php-nyx-env/license)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Monthly Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/d/monthly)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Daily Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/d/daily)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![composer.lock](https://poser.pugx.org/nyx-solutions/php-nyx-env/composerlock)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
 
 ## Installation
 
@@ -18,17 +18,17 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist nox-it/php-nox-env "*"
+php composer.phar require --prefer-dist nyx-solutions/php-nyx-env "*"
 ```
 
 or add
 
 ```
-"nox-it/php-nox-env": "*"
+"nyx-solutions/php-nyx-env": "*"
 ```
 
 to the require section of your `composer.json` file.
 
 ## License
 
-**php-nox-env** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
+**php-nyx-env** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.

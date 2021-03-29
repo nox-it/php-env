@@ -1,6 +1,6 @@
 <?php
 
-    namespace nox\base\env;
+    namespace nyx\base\env;
 
     use Dotenv\Dotenv;
     use Exception;
@@ -13,7 +13,7 @@
     class Environment
     {
         const DEFAULT_BASE_PREFIX = 'APP_ENV';
-        const DEFAULT_APP_PREFIX  = 'NOX';
+        const DEFAULT_APP_PREFIX  = 'NYX';
         const DEFAULT_ENV_PREFIX  = 'PROD';
 
         /**
