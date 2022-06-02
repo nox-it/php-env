@@ -3,13 +3,14 @@ PhpNyxEnv
 
 PhpNyxEnv is a `.env` library for PHP.
 
-[![Latest Stable Version](https://poser.pugx.org/nyx-solutions/php-nyx-env/v/stable)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![Total Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/downloads)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![Latest Unstable Version](https://poser.pugx.org/nyx-solutions/php-nyx-env/v/unstable)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![License](https://poser.pugx.org/nyx-solutions/php-nyx-env/license)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![Monthly Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/d/monthly)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![Daily Downloads](https://poser.pugx.org/nyx-solutions/php-nyx-env/d/daily)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![composer.lock](https://poser.pugx.org/nyx-solutions/php-nyx-env/composerlock)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Latest Stable Version](http://poser.pugx.org/nyx-solutions/php-nyx-env/v)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Total Downloads](http://poser.pugx.org/nyx-solutions/php-nyx-env/downloads)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Latest Unstable Version](http://poser.pugx.org/nyx-solutions/php-nyx-env/v/unstable)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![License](http://poser.pugx.org/nyx-solutions/php-nyx-env/license)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Monthly Downloads](http://poser.pugx.org/nyx-solutions/php-nyx-env/d/monthly)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![Daily Downloads](http://poser.pugx.org/nyx-solutions/php-nyx-env/d/daily)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![composer.lock](http://poser.pugx.org/nyx-solutions/php-nyx-env/composerlock)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
+[![PHP Version Require](http://poser.pugx.org/nyx-solutions/php-nyx-env/require/php)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
 
 ## Installation
 
