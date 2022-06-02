@@ -35,7 +35,6 @@ Thumbs.db
 #########
 *App_Data*
 *aspnet_client*
-_project
 *error_log*
 *access_log*
 *.sass-cache
@@ -49,8 +48,6 @@ _project
 *.lnk
 *.user.ini
 *.url
-*~
-*backwpup_log_*.html
 .picasa.ini
 *.sublime
 *.sublime*
@@ -61,6 +58,3 @@ _project
 ######################
 /vendor
 /composer.lock
-
-# Other #
-######################
