@@ -10,7 +10,6 @@ PhpNyxEnv is a `.env` library for PHP.
 [![Monthly Downloads](http://poser.pugx.org/nyx-solutions/php-nyx-env/d/monthly)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
 [![Daily Downloads](http://poser.pugx.org/nyx-solutions/php-nyx-env/d/daily)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
 [![composer.lock](http://poser.pugx.org/nyx-solutions/php-nyx-env/composerlock)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
-[![PHP Version Require](http://poser.pugx.org/nyx-solutions/php-nyx-env/require/php)](https://packagist.org/packages/nyx-solutions/php-nyx-env)
 
 ## Installation
 
