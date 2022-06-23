@@ -38,4 +38,13 @@
          */
         public static function parseString(string $str): string;
         #endregion
+
+        #region Prefix
+        /**
+         * @param string $name
+         *
+         * @return string
+         */
+        public static function withPrefix(string $name): string;
+        #endregion
     }

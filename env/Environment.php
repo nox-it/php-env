@@ -130,4 +130,14 @@
             return true;
         }
         #endregion
+
+        #region Prefix
+        /**
+         * @inheritdoc
+         */
+        public static function withPrefix(string $name): string
+        {
+            return $name;
+        }
+        #endregion
     }

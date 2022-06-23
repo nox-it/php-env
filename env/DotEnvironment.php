@@ -121,7 +121,7 @@
          * @param string $basePrefix
          * @param string $appPrefix
          * @param string $envPrefix
-        * @param bool    $env
+         * @param bool   $env
          *
          * @return string
          */
@@ -172,9 +172,9 @@
         }
 
         /**
-         * @param string $name
-         *
-         * @return string
+         * @inheritdoc
+         *            
+         * @noinspection PhpMissingParentCallCommonInspection
          */
         public static function withPrefix(string $name): string
         {
