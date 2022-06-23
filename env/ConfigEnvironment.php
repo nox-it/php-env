@@ -33,7 +33,7 @@
             $realVariables = [];
 
             foreach ($variables as $key) {
-                if (array_key_exists($vars, $key)) {
+                if (array_key_exists($key, $vars)) {
                     $realVariables[$key] = $vars[$key];
                 } else {
                     throw new InvalidConfigException(sprintf('The variable %s was not found', $key));
