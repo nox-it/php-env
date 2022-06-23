@@ -1,49 +1,49 @@
 {
-    "name": "nyx-solutions/php-nyx-env",
-    "description": "PHP NYX ENV",
-    "type": "library",
-    "keywords": ["php", "environment"],
-    "license": "BSD-3-Clause",
-    "version": "5.0.0",
-    "authors": [
-        {
-            "name": "NYX Solutions",
-            "email": "nyx@jsas.com.br"
-        },
-        {
-            "name": "Jonatas Sas",
-            "email": "atendimento@jsas.com.br"
-        },
-        {
-            "name": "Breno Herculano",
-            "email": "brenosouherculano@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=8.1.0 <8.2",
-
-        "ext-json": "*",
-        "ext-mbstring": "*",
-
-        "vlucas/phpdotenv": "~4.1.5",
-
-        "nyx-solutions/php-nyx-helpers": "~5.0.0"
+  "name": "nyx-solutions/php-nyx-env",
+  "description": "PHP NYX ENV",
+  "type": "library",
+  "keywords": [
+    "php",
+    "environment"
+  ],
+  "license": "BSD-3-Clause",
+  "version": "5.1.0",
+  "authors": [
+    {
+      "name": "NYX Solutions",
+      "email": "nyx@jsas.com.br"
     },
-    "require-dev": {
+    {
+      "name": "Jonatas Sas",
+      "email": "atendimento@jsas.com.br"
     },
-    "autoload": {
-        "psr-4": {
-            "nyx\\base\\env\\": "env/"
-        }
-    },
-    "config": {
-        "process-timeout": 1800
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/nyx-solutions/php-nyx-env"
-        }
-    ]
+    {
+      "name": "Breno Herculano",
+      "email": "brenosouherculano@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.4.0 <8.2",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "vlucas/phpdotenv": "~4.1.5",
+    "nyx-solutions/php-nyx-helpers": "~5.0.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "nyx\\base\\env\\": "env/"
+    }
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nyx-solutions/php-nyx-env"
+    }
+  ]
 }
