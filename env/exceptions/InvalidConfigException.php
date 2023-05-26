@@ -1,6 +1,6 @@
 <?php
 
-    namespace nyx\base\env;
+    namespace nyx\base\env\exceptions;
 
     use Exception;
 

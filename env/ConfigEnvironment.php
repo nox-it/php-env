@@ -2,6 +2,8 @@
 
     namespace nyx\base\env;
 
+    use nyx\base\env\exceptions\InvalidConfigException;
+
     /**
      * Config Environment
      */

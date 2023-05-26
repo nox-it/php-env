@@ -7,7 +7,7 @@
     "environment"
   ],
   "license": "BSD-3-Clause",
-  "version": "5.1.3",
+  "version": "5.1.4",
   "authors": [
     {
       "name": "NYX Solutions",
@@ -16,10 +16,6 @@
     {
       "name": "Jonatas Sas",
       "email": "atendimento@jsas.com.br"
-    },
-    {
-      "name": "Breno Herculano",
-      "email": "brenosouherculano@gmail.com"
     }
   ],
   "minimum-stability": "stable",
