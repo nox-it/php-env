@@ -7,7 +7,7 @@
     "environment"
   ],
   "license": "BSD-3-Clause",
-  "version": "5.1.4",
+  "version": "5.2.0",
   "authors": [
     {
       "name": "NYX Solutions",
@@ -21,10 +21,11 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=7.4.0 <8.2",
+
     "ext-json": "*",
     "ext-mbstring": "*",
-    "vlucas/phpdotenv": "~4.1.8",
-    "nyx-solutions/php-nyx-helpers": "~5.1.0"
+
+    "vlucas/phpdotenv": "~4.1.8"
   },
   "require-dev": {
   },
